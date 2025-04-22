@@ -1,0 +1,66 @@
+.image-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-carousel-row {
+  display: flex;
+  width: 100%;
+  animation: move-right 20s infinite linear;
+}
+
+.image-carousel-row:hover {
+  animation-play-state: paused;
+}
+
+.image-carousel-row img {
+  width: 400px;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-carousel-row img:hover {
+  transform: scale(1.1);
+}
+
+.image-carousel-row-left {
+  display: flex;
+  width: 100%;
+  animation: move-left 20s infinite linear;
+}
+
+.image-carousel-row-left:hover {
+  animation-play-state: paused;
+}
+
+.image-carousel-row-left img {
+  width: 400px;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-carousel-row-left img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
